@@ -13,6 +13,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    position: relative;
 }
 
 .container {
@@ -22,4 +24,17 @@
 
 .container__imagem {
     padding: 1em;
+}
+
+.lista-menu {
+    /* esconde os elementos da lista */
+    display: none;
+    position: absolute;
+    /* movimenta a lista 100% abaixo do cabecalho */
+    top: 100%;
+}
+
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
 }
